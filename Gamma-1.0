@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int uzunluk;
+	int yukleme;
+	int secim;
+	int devam;
+	printf("Bu program iki ucundan mesnetli ortasindan yuklenmis bir kirisin kesit tesir hesabini yapar\n ");
+	printf("Kirisin uzunlugunu giriniz:");
+	scanf("%d",&uzunluk);
+	printf("N cinsinden yuklemenin siddetini giriniz:");
+	scanf("%d",&yukleme);
+	printf("Yatay eksen z ekseni dusey eksen y eksenidir \n Yuklemenin yonunu giriniz (-y yonunde ise:1 +y yonunde ise:2 ):");
+	scanf("%d",&secim);
+	if ( secim == 1 ) 
+	{
+		printf("    Kirisin gorunumu\n \n");
+		printf("              v F=%d     \n",yukleme);
+		printf("    ---------------------\n");
+		printf("    |///////////////////|\n");
+		printf("    ---------------------\n");
+		printf("    A                    B\n \n \n \n ");
+		printf("    Serbest Cisim Diyagrami\n");
+		printf("              v %dN          \n",yukleme);
+		printf("Faz>----------------------<Fbz\n");
+		printf("    ^Fay              Fby^\n" );
+		
+		
+		
+	}
+	else
+	{
+		printf("    Kirisin gorunumu\n \n");
+		printf("    ---------------------\n");
+		printf("    |///////////////////|\n");
+		printf("    ---------------------\n");
+		printf("    A          ^ F=%d   B\n \n \n \n",yukleme);
+		printf("    Serbest Cisim Diyagrami\n");
+		printf("Faz>----------------------<Fbz\n");
+		printf("    ^Fay    %dN^      Fby^\n",yukleme);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	system("PAUSE");
+	return 0;
+}
