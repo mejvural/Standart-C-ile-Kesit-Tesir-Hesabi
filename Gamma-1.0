@@ -3,16 +3,17 @@
 
 int main()
 {
-	int uzunluk;
-	int yukleme;
-	int uzaklik;
+	float uzunluk;
+	float yukleme;
+	float uzaklik;
 	int secim;
 	int devam;
-	printf("Belirli bir noktasindan yuklenmis kiris icin mesnet tepki hesabi secildi. \n \n ");
-	printf("Sistem asagida gorsellestirilmistir: \n \n");
+	printf("Belirli bir noktasindan yuklenmis kiris icin mesnet tepki hesabi secildi. \n ");
+	ilkasama:
+	printf("\n Sistem asagida gorsellestirilmistir: \n \n");
 	
 
-		printf("   |+y        v F     \n",yukleme);
+		printf("   |+y        v F     \n");
 		printf("   |---------------------\n");
 		printf("   ||///////////////////|\n");
 		printf("   |---------------------\n");
@@ -23,37 +24,38 @@ int main()
 		printf("              v F          \n");
 		printf("Faz>----------------------<Fbz\n");
 		printf("    ^Fay              Fby^\n\n\n" );
-	ilkasama:
-	printf("Kirisin uzunlugunu giriniz:");
-	scanf("%d",&uzunluk);
-	printf("Newton cinsinden yuklemenin siddetini giriniz:");
-	scanf("%d",&yukleme);
-	printf("Yuklemenin A noktasina olan uzakligini giriniz:");
-	scanf("%d",&uzaklik);
-	printf("\n Yuklemenin yonunu giriniz (-y yonunde ise:1 +y yonunde ise:2 ): \n \n");
+	ikinciasama:
+	printf("Kirisin uzunlugunu metre cinsinden belirtiniz:");
+	scanf("%f",&uzunluk);
+	printf("Newton cinsinden yuklemenin siddetini belirtiniz:");
+	scanf("%f",&yukleme);
+	printf("Yuklemenin A noktasina olan uzakligini metre cinsinden belirtiniz:");
+	scanf("%f",&uzaklik);
+		if (uzaklik > uzunluk)
+	{printf("\n Hata: Kuvvet icin belirtilen z degeri kiris uzunlugundan fazla! \n\n");
+	goto ikinciasama;
+	}
+	printf("\n Yuklemenin yonunu belirtiniz (-y yonunde ise:1 +y yonunde ise:2 ): \n \n");
 	scanf("%d",&secim);
 	
-	if (uzaklik > uzunluk)
-	{printf("Hata: Kuvvet icin girilen z degeri kiris uzunlugundan fazla! \n\n");
-	goto ilkasama;
-	}
+
 	if ( secim == 1 ) 
 	{
 		printf("    Kirisin gorunumu\n \n");
-		printf("              v F=%d     \n",yukleme);
+		printf("              v F=%.3f     \n",yukleme);
 		printf("    ---------------------\n");
 		printf("    |///////////////////|\n");
 		printf("    ---------------------\n");
 		printf("    A                    B\n \n \n \n ");
 		printf("    Serbest Cisim Diyagrami\n");
-		printf("              v %dN          \n",yukleme);
+		printf("              v %.3fN          \n",yukleme);
 		printf("Faz>----------------------<Fbz\n");
 		printf("    ^Fay              Fby^\n" );
 		
 		printf("Faz = 0 \n" );
 		printf("Fbz = 0 \n" );
-		printf("Fay = %d \n",yukleme - yukleme*uzaklik/uzunluk);
-		printf("Fby = %d \n",yukleme*uzaklik/uzunluk );
+		printf("Fay = %.3f N \n",yukleme - yukleme*uzaklik/uzunluk);
+		printf("Fby = %.3f N \n",yukleme*uzaklik/uzunluk );
 
 		
 		
@@ -64,20 +66,23 @@ int main()
 		printf("    ---------------------\n");
 		printf("    |///////////////////|\n");
 		printf("    ---------------------\n");
-		printf("    A          ^ F=%d   B\n \n \n \n",yukleme);
+		printf("    A          ^ F=%.3f   B\n \n \n \n",yukleme);
 		printf("    Serbest Cisim Diyagrami\n");
 		printf("Faz>----------------------<Fbz\n");
-		printf("    ^Fay    %dN^      Fby^\n",yukleme);
+		printf("    ^Fay    %.3fN^      Fby^\n",yukleme);
 		
 		printf("Faz = 0 \n" );
 		printf("Fbz = 0 \n" );
-		printf("Fay = - %d \n",yukleme - yukleme*uzaklik/uzunluk );
-		printf("Fby = - %d \n",yukleme*uzaklik/uzunluk );
+		printf("Fay = - %.3f N \n",yukleme - yukleme*uzaklik/uzunluk );
+		printf("Fby = - %.3f N \n",yukleme*uzaklik/uzunluk );
 		
 	}
 	
-	
-	
+	printf("\nAyni islemi tekrar yapmak icin 1, \n");
+	printf("Ana menuye donmek icin 2 tusuna basin. \n");
+	printf("Programi kapatmak icin Enter tusuna basin. \n");
+	scanf("%d",&secim);
+	if (secim == 1) { goto ilkasama; }
 	
 	
 	
