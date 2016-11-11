@@ -7,12 +7,26 @@ int main()
 	int yukleme;
 	int secim;
 	int devam;
-	printf("Bu program iki ucundan mesnetli ortasindan yuklenmis bir kirisin kesit tesir hesabini yapar\n ");
-	printf("Kirisin uzunlugunu giriniz:");
-	scanf("%d",&uzunluk);
-	printf("N cinsinden yuklemenin siddetini giriniz:");
+	printf("Ortasindan yuklenmis kiris icin mesnet tepki hesabi secildi. \n \n ");
+	printf("Sistem asagida gorsellestirilmistir: \n \n");
+	
+
+		printf("   |+y        v F     \n",yukleme);
+		printf("   |---------------------\n");
+		printf("   ||///////////////////|\n");
+		printf("   |---------------------\n");
+		printf("   |A                    B\n");
+		printf("   |_____________________________+z\n\n\n");
+		printf("    Serbest Cisim Diyagrami\n\n");
+		printf("              v F          \n");
+		printf("Faz>----------------------<Fbz\n");
+		printf("    ^Fay              Fby^\n\n\n" );
+	
+	//printf("Kirisin uzunlugunu giriniz:");
+	//scanf("%d",&uzunluk);
+	printf("Newton cinsinden yuklemenin siddetini giriniz:");
 	scanf("%d",&yukleme);
-	printf("Yatay eksen z ekseni dusey eksen y eksenidir \n Yuklemenin yonunu giriniz (-y yonunde ise:1 +y yonunde ise:2 ):");
+	printf("\n Yuklemenin yonunu giriniz (-y yonunde ise:1 +y yonunde ise:2 ): \n \n");
 	scanf("%d",&secim);
 	if ( secim == 1 ) 
 	{
@@ -27,6 +41,11 @@ int main()
 		printf("Faz>----------------------<Fbz\n");
 		printf("    ^Fay              Fby^\n" );
 		
+		printf("Faz = 0 \n" );
+		printf("Fbz = 0 \n" );
+		printf("Fay = %d \n",yukleme/2 );
+		printf("Fay = %d \n",yukleme/2 );
+
 		
 		
 	}
@@ -40,6 +59,11 @@ int main()
 		printf("    Serbest Cisim Diyagrami\n");
 		printf("Faz>----------------------<Fbz\n");
 		printf("    ^Fay    %dN^      Fby^\n",yukleme);
+		
+				printf("Faz = 0 \n" );
+		printf("Fbz = 0 \n" );
+		printf("Fay = - %d \n",yukleme/2 );
+		printf("Fay = - %d \n",yukleme/2 );
 		
 	}
 	
