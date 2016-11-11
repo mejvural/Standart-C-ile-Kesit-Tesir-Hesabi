@@ -44,7 +44,7 @@ int main()
 		printf("Faz = 0 \n" );
 		printf("Fbz = 0 \n" );
 		printf("Fay = %d \n",yukleme/2 );
-		printf("Fay = %d \n",yukleme/2 );
+		printf("Fby = %d \n",yukleme/2 );
 
 		
 		
@@ -60,10 +60,10 @@ int main()
 		printf("Faz>----------------------<Fbz\n");
 		printf("    ^Fay    %dN^      Fby^\n",yukleme);
 		
-				printf("Faz = 0 \n" );
+		printf("Faz = 0 \n" );
 		printf("Fbz = 0 \n" );
 		printf("Fay = - %d \n",yukleme/2 );
-		printf("Fay = - %d \n",yukleme/2 );
+		printf("Fby = - %d \n",yukleme/2 );
 		
 	}
 	
