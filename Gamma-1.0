@@ -5,9 +5,10 @@ int main()
 {
 	int uzunluk;
 	int yukleme;
+	int uzaklik;
 	int secim;
 	int devam;
-	printf("Ortasindan yuklenmis kiris icin mesnet tepki hesabi secildi. \n \n ");
+	printf("Belirli bir noktasindan yuklenmis kiris icin mesnet tepki hesabi secildi. \n \n ");
 	printf("Sistem asagida gorsellestirilmistir: \n \n");
 	
 
@@ -16,18 +17,26 @@ int main()
 		printf("   ||///////////////////|\n");
 		printf("   |---------------------\n");
 		printf("   |A                    B\n");
-		printf("   |_____________________________+z\n\n\n");
+		printf("   |_____________________________+z\n\n");
+		printf("    A noktasi \(0,0\) noktasidir. \n\n");
 		printf("    Serbest Cisim Diyagrami\n\n");
 		printf("              v F          \n");
 		printf("Faz>----------------------<Fbz\n");
 		printf("    ^Fay              Fby^\n\n\n" );
-	
-	//printf("Kirisin uzunlugunu giriniz:");
-	//scanf("%d",&uzunluk);
+	ilkasama:
+	printf("Kirisin uzunlugunu giriniz:");
+	scanf("%d",&uzunluk);
 	printf("Newton cinsinden yuklemenin siddetini giriniz:");
 	scanf("%d",&yukleme);
+	printf("Yuklemenin A noktasina olan uzakligini giriniz:");
+	scanf("%d",&uzaklik);
 	printf("\n Yuklemenin yonunu giriniz (-y yonunde ise:1 +y yonunde ise:2 ): \n \n");
 	scanf("%d",&secim);
+	
+	if (uzaklik > uzunluk)
+	{printf("Hata: Kuvvet icin girilen z degeri kiris uzunlugundan fazla! \n\n");
+	goto ilkasama;
+	}
 	if ( secim == 1 ) 
 	{
 		printf("    Kirisin gorunumu\n \n");
@@ -43,8 +52,8 @@ int main()
 		
 		printf("Faz = 0 \n" );
 		printf("Fbz = 0 \n" );
-		printf("Fay = %d \n",yukleme/2 );
-		printf("Fby = %d \n",yukleme/2 );
+		printf("Fay = %d \n",yukleme - yukleme*uzaklik/uzunluk);
+		printf("Fby = %d \n",yukleme*uzaklik/uzunluk );
 
 		
 		
@@ -62,8 +71,8 @@ int main()
 		
 		printf("Faz = 0 \n" );
 		printf("Fbz = 0 \n" );
-		printf("Fay = - %d \n",yukleme/2 );
-		printf("Fby = - %d \n",yukleme/2 );
+		printf("Fay = - %d \n",yukleme - yukleme*uzaklik/uzunluk );
+		printf("Fby = - %d \n",yukleme*uzaklik/uzunluk );
 		
 	}
 	
