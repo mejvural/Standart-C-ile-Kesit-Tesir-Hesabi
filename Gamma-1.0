@@ -7,6 +7,7 @@ int main()
 	int yukleme;
 	int secim;
 	int devam;
+	printf("Merhaba \n");
 	printf("Bu program iki ucundan mesnetli ortasindan yuklenmis bir kirisin kesit tesir hesabini yapar\n ");
 	printf("Kirisin uzunlugunu giriniz:");
 	scanf("%d",&uzunluk);
