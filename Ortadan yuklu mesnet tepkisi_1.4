@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	float yukleme;
+	int secim;
+	int devam;
+	printf("Ortasindan yuklenmis kiris icin mesnet tepki hesabi secildi. \n \n ");
+	ilkasama:
+	printf("Sistem asagida gorsellestirilmistir: \n \n");
+	
+
+		printf("   |+y        v F     \n",yukleme);
+		printf("   |---------------------\n");
+		printf("   ||///////////////////|\n");
+		printf("   |---------------------\n");
+		printf("   |A                    B\n");
+		printf("   |_____________________________+z\n\n\n");
+		printf("    Serbest Cisim Diyagrami\n\n");
+		printf("              v F          \n");
+		printf("Faz>----------------------<Fbz\n");
+		printf("    ^Fay              Fby^\n\n\n" );
+	
+	//printf("Kirisin uzunlugunu belirtiniz:");
+	//scanf("%d",&uzunluk);
+	printf("Newton cinsinden yuklemenin siddetini belirtiniz:");
+	scanf("%f",&yukleme);
+	printf("\n Yuklemenin yonunu belirtiniz (-y yonunde ise:1 +y yonunde ise:2 ): \n \n");
+	scanf("%d",&secim);
+	if ( secim == 1 ) 
+	{
+		printf("    Kirisin gorunumu\n \n");
+		printf("              v F=%.3f     \n",yukleme);
+		printf("    ---------------------\n");
+		printf("    |///////////////////|\n");
+		printf("    ---------------------\n");
+		printf("    A                    B\n \n \n \n ");
+		printf("    Serbest Cisim Diyagrami\n");
+		printf("              v %.3fN          \n",yukleme);
+		printf("Faz>----------------------<Fbz\n");
+		printf("    ^Fay              Fby^\n" );
+		
+		printf("Faz = 0 \n" );
+		printf("Fbz = 0 \n" );
+		printf("Fay = %.3f N\n",yukleme/2 );
+		printf("Fby = %.3f N\n",yukleme/2 );
+
+		
+		
+	}
+	else
+	{
+		printf("    Kirisin gorunumu\n \n");
+		printf("    ---------------------\n");
+		printf("    |///////////////////|\n");
+		printf("    ---------------------\n");
+		printf("    A          ^ F=%d   B\n \n \n \n",yukleme);
+		printf("    Serbest Cisim Diyagrami\n");
+		printf("Faz>----------------------<Fbz\n");
+		printf("    ^Fay    %dN^      Fby^\n",yukleme);
+		
+		printf("Faz = 0 \n" );
+		printf("Fbz = 0 \n" );
+		printf("Fay = - %.3f N\n",yukleme/2 );
+		printf("Fby = - %.3f N\n",yukleme/2 );
+		
+	}
+	
+	printf("\nAyni islemi tekrar yapmak icin 1, \n");
+	printf("Ana menuye donmek icin 2 tusuna basin. \n");
+	printf("Programi kapatmak icin 3 tusuna basin. \n"); // 3 tusu hic bir seye bagli degil; ama donguyu devam ettirdigi icin calisiyor ;)
+	scanf("%d",&secim);
+	if (secim == 1) { goto ilkasama; } //2 tusu icin bir if command'i hazirlanmali
+	
+	
+	system("PAUSE");
+	return 0;
+}
