@@ -8,9 +8,8 @@ void ortadan_yuklu_mesnet_tepki();
 int main()
     {
           int menusecim ;
-          
-          printf("Kesit tesir hesabi programina hosgeldiniz!\n");
-          printf("Lutfen yapmak istediginiz islem icin belirtilen degeri yazip Enter tusuna basin.\n");
+          printf("\n \nKesit tesir hesabi programina hosgeldiniz!\n");
+          printf("\nLutfen yapmak istediginiz islem icin belirtilen degeri yazip Enter tusuna basin.\n");
           printf("Secilen belirli bir noktasindan yuklemeye tabii olan kirisin mesnet tepkileri icin : 1\n");
           printf("Ortasindan yuklemeye tabii olan kirisin mesnet tepkileri icin : 2\n\n");
           secimasamasi:
@@ -51,7 +50,7 @@ void belli_noktadan_yuklu_mesnet_tepki()
 		printf("   |---------------------\n");
 		printf("   |A                    B\n");
 		printf("   |_____________________________+z\n\n");
-		printf("    A noktasi \(0,0\) noktasidir. \n\n");
+		printf("    A noktasi (0,0) noktasidir. \n\n");
 		printf("    Serbest Cisim Diyagrami\n\n");
 		printf("              v F          \n");
 		printf("Faz>----------------------<Fbz\n");
@@ -115,7 +114,6 @@ void belli_noktadan_yuklu_mesnet_tepki()
 	printf("Programi kapatmak icin 3 tusuna basin. \n"); // 3 tusu hic bir seye bagli degil; ama donguyu devam ettirdigi icin calisiyor ;)
 	scanf("%d",&secim);
 	if (secim == 1) { goto ilkasama; } //2 tusu icin bir if command'i hazirlanmali
-	
 	system("PAUSE");
      }
      
@@ -123,7 +121,7 @@ void belli_noktadan_yuklu_mesnet_tepki()
  void ortadan_yuklu_mesnet_tepki()
  
       {
-      float yukleme;
+        float yukleme;
 	int secim;
 	int devam;
 	printf("Ortasindan yuklenmis kiris icin mesnet tepki hesabi secildi. \n \n ");
@@ -131,7 +129,7 @@ void belli_noktadan_yuklu_mesnet_tepki()
 	printf("Sistem asagida gorsellestirilmistir: \n \n");
 	
 
-		printf("   |+y        v F     \n",yukleme);
+		printf("   |+y        v F     \n");
 		printf("   |---------------------\n");
 		printf("   ||///////////////////|\n");
 		printf("   |---------------------\n");
@@ -178,7 +176,7 @@ void belli_noktadan_yuklu_mesnet_tepki()
 		printf("    A          ^ F=%.3f   B\n \n \n \n",yukleme);
 		printf("    Serbest Cisim Diyagrami\n");
 		printf("Faz>----------------------<Fbz\n");
-		printf("    ^Fay    %.3fN^      Fby^\n",yukleme);
+		printf("    ^Fay    %.3f N^      Fby^\n",yukleme);
 		
 		printf("Faz = 0 \n" );
 		printf("Fbz = 0 \n" );
@@ -192,7 +190,7 @@ void belli_noktadan_yuklu_mesnet_tepki()
 	printf("Programi kapatmak icin 3 tusuna basin. \n"); // 3 tusu hic bir seye bagli degil; ama donguyu devam ettirdigi icin calisiyor ;)
 	scanf("%d",&secim);
 	if (secim == 1) { goto ilkasama; } //2 tusu icin bir if command'i hazirlanmali
-	
+
 	system("PAUSE");
 
-      }
+}
