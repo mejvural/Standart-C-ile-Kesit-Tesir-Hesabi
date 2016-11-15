@@ -175,10 +175,10 @@ void belli_noktadan_yuklu_mesnet_tepki()
 		printf("    ---------------------\n");
 		printf("    |///////////////////|\n");
 		printf("    ---------------------\n");
-		printf("    A          ^ F=%d   B\n \n \n \n",yukleme);
+		printf("    A          ^ F=%.3f   B\n \n \n \n",yukleme);
 		printf("    Serbest Cisim Diyagrami\n");
 		printf("Faz>----------------------<Fbz\n");
-		printf("    ^Fay    %dN^      Fby^\n",yukleme);
+		printf("    ^Fay    %.3fN^      Fby^\n",yukleme);
 		
 		printf("Faz = 0 \n" );
 		printf("Fbz = 0 \n" );
